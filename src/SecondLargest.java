@@ -22,7 +22,7 @@ public class SecondLargest {
                 }
             }
             int idx2=0;
-            while(arr[idx2]==arr[idx])
+            while(idx2 < n && arr[idx2]==arr[idx])
             {
                 idx2++;
             }
