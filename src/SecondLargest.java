@@ -30,7 +30,8 @@ public class SecondLargest {
             {
                 if (arr[i]==arr[idx])
                 {
-                    continue;
+                     System.out.print(arr[idx]);
+                     return;
                 }
                 if (arr[idx2]<=arr[i])
                 {
