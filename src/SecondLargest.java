@@ -16,15 +16,19 @@ public class SecondLargest {
             int idx=0;
             for(int i = 1;i<n;i++)
             {
-                if (arr[idx]<arr[i])
+                if (arr[idx]<=arr[i])
                 {
                     idx=i;
                 }
             }
-            int idx2 = (idx == 0)?1:0;
+            int idx2=0;
+            while(arr[idx2]==arr[idx])
+            {
+                idx2++;
+            }
             for(int i = 0;i<n;i++)
             {
-                if (i==idx)
+                if (arr[i]==arr[idx])
                 {
                     continue;
                 }
