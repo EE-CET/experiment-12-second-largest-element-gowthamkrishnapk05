@@ -21,17 +21,32 @@ public class SecondLargest {
                     idx=i;
                 }
             }
+            
+            int num=0;
+            for(int i=0;i<n;i++)
+            {
+                if(arr[i]==arr[idx])
+                {
+                        num++;
+                }
+            }
+            if(num>1)
+            {
+                System.out.print(arr[idx]);
+                return;
+            }
+
             int idx2=0;
             while(idx2 < n && arr[idx2]==arr[idx])
             {
                 idx2++;
             }
+            
             for(int i = 0;i<n;i++)
             {
                 if (arr[i]==arr[idx])
                 {
-                     System.out.print(arr[idx]);
-                     return;
+                    continue;
                 }
                 if (arr[idx2]<=arr[i])
                 {
