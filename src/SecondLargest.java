@@ -21,14 +21,14 @@ public class SecondLargest {
                     idx=i;
                 }
             }
-            int idx2 = 0;
+            int idx2 = (idx == 0)?1:0;
             for(int i = 0;i<n;i++)
             {
                 if (i==idx)
                 {
                     continue;
                 }
-                if (arr[idx2]<arr[i])
+                if (arr[idx2]<=arr[i])
                 {
                     idx2=i;
                 }
