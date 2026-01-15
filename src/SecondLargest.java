@@ -37,7 +37,7 @@ public class SecondLargest {
                     idx2=i;
                 }
             }
-            System.out.println(idx2);
+            System.out.println(arr[idx2]);
         
         }
 }
