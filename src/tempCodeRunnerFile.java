@@ -16,44 +16,24 @@ public class SecondLargest {
             int idx=0;
             for(int i = 1;i<n;i++)
             {
-                if (arr[idx]<=arr[i])
+                if (arr[idx]<arr[i])
                 {
                     idx=i;
                 }
             }
-            
-            int num=0;
-            for(int i=0;i<n;i++)
-            {
-                if(arr[i]==arr[idx])
-                {
-                        num++;
-                }
-            }
-            if(num>1)
-            {
-                System.out.print(arr[idx]);
-                return;
-            }
-
-            int idx2=0;
-            while(idx2 < n && arr[idx2]==arr[idx])
-            {
-                idx2++;
-            }
-            
+            int idx2 = 0;
             for(int i = 0;i<n;i++)
             {
-                if (arr[i]==arr[idx])
+                if (i==idx)
                 {
                     continue;
                 }
-                if (arr[idx2]<=arr[i])
+                if (arr[idx2]<arr[i])
                 {
                     idx2=i;
                 }
             }
-            System.out.print(arr[idx2]);
+            System.out.println(idx2);
         
         }
 }
